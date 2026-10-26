@@ -1,0 +1,6 @@
+{
+  "name": "ClipTurbo TH - Thai Social Commerce Video Generator",
+  "description": "Production-grade cloud-native Thai social commerce AI video generator with PyThaiNLP word tokenization, TikTok Safe Zone subtitles, high-inflection Thai voice synthesis, and Celery/Redis queue architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

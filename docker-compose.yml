@@ -1,0 +1,97 @@
+version: '3.8'
+
+services:
+  # 1. Font Downloader & Initializer
+  # Ensures 'Prompt' and 'Kanit' Google Fonts are downloaded into libass font path before rendering
+  font-init:
+    image: alpine:latest
+    container_name: clipturbo-font-init
+    volumes:
+      - custom-thai-fonts:/usr/share/fonts/truetype/custom
+    command: >
+      sh -c "
+        echo 'Downloading Thai fonts (Prompt & Kanit) for libass...' &&
+        apk add --no-cache curl unzip &&
+        mkdir -p /usr/share/fonts/truetype/custom &&
+        curl -fsSL -o /tmp/prompt.zip 'https://fonts.google.com/download?family=Prompt' &&
+        unzip -o /tmp/prompt.zip -d /usr/share/fonts/truetype/custom/prompt &&
+        curl -fsSL -o /tmp/kanit.zip 'https://fonts.google.com/download?family=Kanit' &&
+        unzip -o /tmp/kanit.zip -d /usr/share/fonts/truetype/custom/kanit &&
+        echo 'Thai fonts provisioned successfully.'
+      "
+
+  # 2. Redis Message Broker & Result Backend
+  redis:
+    image: redis:7.2-alpine
+    container_name: clipturbo-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # 3. Production FastAPI REST Gateway
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: clipturbo-api
+    restart: unless-stopped
+    depends_on:
+      redis:
+        condition: service_healthy
+      font-init:
+        condition: service_completed_successfully
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - ELEVENLABS_API_KEY=${ELEVENLABS_API_KEY}
+      - BOTNOI_API_KEY=${BOTNOI_API_KEY}
+      - CELERY_CONCURRENCY=4
+    ports:
+      - "8000:8000"
+    volumes:
+      - custom-thai-fonts:/usr/share/fonts/truetype/custom:ro
+      - media-storage:/tmp/clipturbo_renders
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
+
+  # 4. Celery Distributed Video Rendering Worker
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: clipturbo-worker
+    restart: unless-stopped
+    depends_on:
+      redis:
+        condition: service_healthy
+      font-init:
+        condition: service_completed_successfully
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - ELEVENLABS_API_KEY=${ELEVENLABS_API_KEY}
+      - BOTNOI_API_KEY=${BOTNOI_API_KEY}
+      - CELERY_CONCURRENCY=4
+    volumes:
+      - custom-thai-fonts:/usr/share/fonts/truetype/custom:ro
+      - media-storage:/tmp/clipturbo_renders
+    # Enable NVIDIA GPU runtime in production when nvidia-container-toolkit is installed
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu, video]
+    command: celery -A celery_worker.celery_app worker --loglevel=info -c 4
+
+volumes:
+  redis-data:
+  custom-thai-fonts:
+  media-storage:

@@ -1,0 +1,246 @@
+---
+name: SaaS Commerce Velocity
+colors:
+  surface: '#f8f9ff'
+  surface-dim: '#cbdbf5'
+  surface-bright: '#f8f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#eff4ff'
+  surface-container: '#e5eeff'
+  surface-container-high: '#dce9ff'
+  surface-container-highest: '#d3e4fe'
+  on-surface: '#0b1c30'
+  on-surface-variant: '#434655'
+  inverse-surface: '#213145'
+  inverse-on-surface: '#eaf1ff'
+  outline: '#737686'
+  outline-variant: '#c3c6d7'
+  surface-tint: '#0053db'
+  primary: '#004ac6'
+  on-primary: '#ffffff'
+  primary-container: '#2563eb'
+  on-primary-container: '#eeefff'
+  inverse-primary: '#b4c5ff'
+  secondary: '#9d4300'
+  on-secondary: '#ffffff'
+  secondary-container: '#fd761a'
+  on-secondary-container: '#5c2400'
+  tertiary: '#005795'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#0070bd'
+  on-tertiary-container: '#e9f1ff'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#dbe1ff'
+  primary-fixed-dim: '#b4c5ff'
+  on-primary-fixed: '#00174b'
+  on-primary-fixed-variant: '#003ea8'
+  secondary-fixed: '#ffdbca'
+  secondary-fixed-dim: '#ffb690'
+  on-secondary-fixed: '#341100'
+  on-secondary-fixed-variant: '#783200'
+  tertiary-fixed: '#d2e4ff'
+  tertiary-fixed-dim: '#9fcaff'
+  on-tertiary-fixed: '#001d36'
+  on-tertiary-fixed-variant: '#00497e'
+  background: '#f8f9ff'
+  on-background: '#0b1c30'
+  surface-variant: '#d3e4fe'
+typography:
+  display-lg:
+    fontFamily: Inter
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: 52px
+    letterSpacing: -0.02em
+  display-lg-mobile:
+    fontFamily: Inter
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: 44px
+    letterSpacing: -0.015em
+  headline-xl:
+    fontFamily: Inter
+    fontSize: 30px
+    fontWeight: '600'
+    lineHeight: 42px
+    letterSpacing: -0.015em
+  headline-xl-mobile:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 36px
+    letterSpacing: -0.01em
+  headline-lg:
+    fontFamily: Inter
+    fontSize: 22px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Inter
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 28px
+    letterSpacing: -0.005em
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 28px
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 22px
+  label-lg:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 22px
+  label-md:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 18px
+    letterSpacing: 0.01em
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+  code-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: 18px
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+The design system is crafted for high-velocity social commerce sellers, live streamers, and affiliate marketers operating across platforms like TikTok Shop, Shopee, and LINE Shopping. It balances the ultra-refined, structured engineering aesthetic of developer-first platforms with the dynamic energy, urgency, and monetization clarity required in modern e-commerce.
+
+The visual style blends **Modern Hyper-Clean SaaS** with **Tactile Micro-Surfacing**:
+- **Pure Canvas Precision:** Deep contrast anchored on pure white containers with cool-slate borders and pale neutral canvas backings.
+- **Action-Oriented Energy:** High-intent utility driven by electric cobalt primary controls, balanced with vibrant commerce amber for checkout and affiliate triggers.
+- **Bilingual Typographic Harmony:** Built for seamless visual weight matching between English and Thai scripts, preventing vertical clipping of tone marks and diacritics.
+- **High Information Density with Generous Air:** Crisp borders and compact data tables sit within relaxed structural viewports, providing clarity under complex inventory, analytics, and automation workflows.
+
+## Colors
+
+The palette operates on a strict functional hierarchy built for daylight readability, scanability, and financial confidence:
+
+- **Canvas & Surface Architecture:**
+  - `canvas-default`: `#F8FAFC` (Slate 50) establishes the global viewport backdrop.
+  - `surface-card`: `#FFFFFF` (Pure White) houses all focal content, tables, and component containers.
+  - `surface-subtle`: `#F1F5F9` (Slate 100) provides recessed framing for search bars, disabled inputs, and pill backings.
+  - `border-subtle`: `#E2E8F0` (Slate 200) serves as the universal perimeter for components and cards.
+  - `border-strong`: `#CBD5E1` (Slate 300) applied on interactive hover boundaries and active tabs.
+
+- **Brand & Action Tiers:**
+  - `primary` (`#2563EB`): Electric Cobalt for core SaaS navigation, system triggers, automated sync actions, and focal CTAs. Hover state deepens to `#1D4ED8`.
+  - `secondary` (`#F97316`): Commerce Amber-Orange, dedicated to flash deals, TikTok/Shopee GMV callouts, live stream notifications, and cart checkout conversions.
+  - `tertiary` (`#0077C8`): PromptPay Cyan-Blue, reserved for settlement dashboards, payout confirmations, bank transfers, and financial ledger status.
+  - `tertiary-dark` (`#003D6B`): National e-payment anchoring shade for bank reconciliation badges and institutional data.
+
+- **Content & Typography:**
+  - `text-primary`: `#0F172A` (Slate 900) for headers, values, and high-priority labels.
+  - `text-secondary`: `#475569` (Slate 600) for body narrative and metadata.
+  - `text-muted`: `#94A3B8` (Slate 400) for captions, placeholders, and inactive icons.
+
+## Typography
+
+The type scale strictly accounts for bilingual English/Thai typography. When rendering Thai copy, fall back systematically to **Prompt** or **Kanit** with native rendering behaviors:
+
+- **Thai Script Rendering Rules:**
+  - Standard English line-height multiples (1.2–1.3x) lead to severe vertical truncation of upper tone marks (ไม้เอก, ไม้โท) and lower vowels (สระอุ, สระอู). The typography tokens enforce a minimum line-height of 1.6x to 1.75x across all body and display sizes to ensure flawless vertical clearance.
+  - Set `text-rendering: optimizeLegibility` and disable negative letter-spacing when Thai unicode ranges (`U+0E00` to `U+0E7F`) are active.
+  - Heading levels pair `Inter` (weight 600/700) with `Prompt` (weight 600) for balanced character x-heights.
+- **Tabular Numerics:** All currency figures, GMV metrics, and affiliate commission tallies must use `font-feature-settings: "tnum" on, "cv05" on` to align monetary data in tables.
+
+## Layout & Spacing
+
+The layout is built on a responsive 12-column fluid grid on desktop transitioning to a 4-column system on mobile viewports.
+
+- **Breakpoints:**
+  - **Desktop (>= 1280px):** 12 columns, max-width `1440px`, centered with `margin: 2rem` and `gutter: 1.5rem`.
+  - **Tablet (768px – 1279px):** 8 columns, fluid edges with `margin: 1.5rem` and `gutter: 1rem`.
+  - **Mobile (< 768px):** 4 columns, `margin-mobile: 1rem` and `gutter-mobile: 1rem`. Navigation collapses into a sticky bottom application dock.
+- **Rhythm & Alignments:**
+  - Dense dashboards leverage a 4px/8px micro-grid. Component padding scales predictably: inputs and chips use `space-sm` vertically and `space-md` horizontally.
+  - Metric boards and video rendering queues utilize standard multi-row cards separated by `space-lg`.
+
+## Elevation & Depth
+
+This system avoids heavy drop shadows, instead using crisp physical isolation via **subtle perimeter lines** and **diffused ambient micro-shadows**:
+
+- **Level 0 (Flat/Base):** `background: #F8FAFC`, no shadow, zero elevation. Used for root canvas and sub-navigation tracks.
+- **Level 1 (Card / Container):** `background: #FFFFFF`, border: `1px solid #E2E8F0`, shadow: `0 1px 2px 0 rgba(15, 23, 42, 0.04), 0 1px 3px -1px rgba(15, 23, 42, 0.02)`. Used for analytics charts, table shells, and video queue items.
+- **Level 2 (Interactive Floating / Dropdowns):** `background: #FFFFFF`, border: `1px solid #CBD5E1`, shadow: `0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05)`. Used for filter flyouts, popovers, and hovered cards.
+- **Level 3 (Modals / Overlays):** `background: #FFFFFF`, border: `1px solid #E2E8F0`, shadow: `0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04)`. Accompanied by a backdrop blur scrim: `rgba(15, 23, 42, 0.3)` with `backdrop-filter: blur(4px)`.
+- **Level 4 (Sticky Dynamic Bar):** Subtle glass surface: `rgba(255, 255, 255, 0.85)` with `backdrop-filter: blur(12px)` and a bottom border of `1px solid #E2E8F0`.
+
+## Shapes
+
+The geometric identity relies on soft, modern radii (`rounded-2xl` for major structural cards) offset by slightly tighter radii on actionable sub-elements:
+
+- **Cards & Data Panels:** `1rem` (16px) for standard modules; `1.5rem` (24px) for hero containers, metric overview cards, and media playback docks.
+- **Interactive Controls (Buttons, Text Inputs, Selects):** `0.5rem` (8px) ensures structural balance without excessive pill curving, keeping the tool professional and precise.
+- **Badges, Tags & Status Pills:** Full pill (`9999px`) for channel tags (TikTok Shop, Shopee, PromptPay) and live indicator chips.
+
+## Components
+
+- **Buttons:**
+  - *Primary:* Solid `#2563EB`, text `#FFFFFF`, border `transparent`, subtle inset top shadow `inset 0 1px 0 rgba(255, 255, 255, 0.15)`.
+  - *Commerce / Conversion:* Solid `#F97316`, text `#FFFFFF`, hover `#EA580C`. Reserved for direct affiliate actions and shop synchronizations.
+  - *Secondary / Outline:* Background `#FFFFFF`, text `#0F172A`, border `1px solid #E2E8F0`, hover background `#F8FAFC`.
+  - *Ghost / Minimal:* Background `transparent`, text `#475569`, hover background `#F1F5F9`.
+  - *Height & Padding:* Standard height `40px`, padding `0 16px`. Compact size `32px`, padding `0 12px`.
+
+- **Cards:**
+  - Pure `#FFFFFF` background with `1px solid #E2E8F0` border and `1rem` to `1.5rem` corner radius.
+  - Header, content, and footer zones are partitioned using subtle border dividers (`border-t 1px solid #F1F5F9`) with standard `1.5rem` internal padding.
+
+- **Chips & Status Tags:**
+  - Height `24px`, font size `12px`, font weight `500`, radius `9999px`.
+  - *PromptPay Payout:* Background `#E0F2FE`, border `#BAE6FD`, text `#003D6B`.
+  - *TikTok Shop Sync:* Background `#FFF7ED`, border `#FFEDD5`, text `#C2410C`.
+  - *Live Active:* Pulsing dot indicator (`#22C55E`) backed by `#DCFCE7` green pill.
+
+- **Input Fields & Form Controls:**
+  - Height `40px`, border `1px solid #E2E8F0`, surface `#FFFFFF`, placeholder `#94A3B8`.
+  - *Focus State:* Border `#2563EB`, accompanied by an outer micro-glow ring: `0 0 0 3px rgba(37, 99, 235, 0.12)`.
+  - *Numeric Currencies:* Prepended with permanent non-editable currency prefix `฿` (THB) styled in `#64748B`.
+
+- **Checkboxes & Radios:**
+  - Checkbox: 18x18px, `border: 1px solid #CBD5E1`, radius `4px`. Checked state: background `#2563EB`, white check glyph.
+  - Radio: 18x18px, radius `50%`. Checked state: background `#FFFFFF`, border: `5px solid #2563EB`.
+
+- **Specialized Creator Components:**
+  - *Live Stream GMV Ticker:* Segmented metric strip displaying active GMV, items sold, and viewer retention in real-time with tabular numeric spacing.
+  - *Video Clip Render Progress:* Horizontal segmented progress bar with `#2563EB` fill, `#E2E8F0` track, and inline duration timecodes.

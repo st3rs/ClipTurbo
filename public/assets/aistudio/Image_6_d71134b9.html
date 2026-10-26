@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+
+<html class="light" lang="th"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>ClipTurbo TH - Creator Studio</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#dce9ff","secondary":"#9d4300","on-primary-fixed-variant":"#003ea8","primary":"#004ac6","on-surface-variant":"#434655","error-container":"#ffdad6","on-tertiary-container":"#e9f1ff","surface-variant":"#d3e4fe","on-secondary-container":"#5c2400","on-primary":"#ffffff","tertiary-fixed":"#d2e4ff","surface-container-lowest":"#ffffff","primary-fixed":"#dbe1ff","on-tertiary-fixed-variant":"#00497e","on-surface":"#0b1c30","surface-bright":"#f8f9ff","on-tertiary-fixed":"#001d36","secondary-fixed":"#ffdbca","tertiary-fixed-dim":"#9fcaff","background":"#f8f9ff","secondary-fixed-dim":"#ffb690","surface-container-low":"#eff4ff","on-secondary":"#ffffff","on-background":"#0b1c30","surface-container-highest":"#d3e4fe","error":"#ba1a1a","on-secondary-fixed-variant":"#783200","surface-tint":"#0053db","secondary-container":"#fd761a","on-secondary-fixed":"#341100","inverse-on-surface":"#eaf1ff","inverse-surface":"#213145","on-primary-container":"#eeefff","surface":"#f8f9ff","outline":"#737686","surface-dim":"#cbdbf5","tertiary":"#005795","primary-container":"#2563eb","outline-variant":"#c3c6d7","on-error-container":"#93000a","on-primary-fixed":"#00174b","inverse-primary":"#b4c5ff","primary-fixed-dim":"#b4c5ff","on-error":"#ffffff","tertiary-container":"#0070bd","on-tertiary":"#ffffff","surface-container":"#e5eeff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-sm":"0.5rem","margin-mobile":"1rem","margin":"2rem","gutter":"1.5rem","gutter-mobile":"1rem","space-xl":"2.5rem","space-xs":"0.25rem","space-md":"1rem"},fontFamily:{"headline-lg":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"headline-xl-mobile":["Inter"],"label-sm":["Inter"],"display-lg":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"headline-xl":["Inter"],"code-sm":["Inter"],"display-lg-mobile":["Inter"],"headline-md":["Inter"]},fontSize:{"headline-lg":["22px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"28px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"24px",fontWeight:"400"}],"headline-xl-mobile":["24px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"display-lg":["40px",{lineHeight:"52px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"22px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"22px",fontWeight:"600"}],"headline-xl":["30px",{lineHeight:"42px",letterSpacing:"-0.015em",fontWeight:"600"}],"code-sm":["12px",{lineHeight:"18px",fontWeight:"500"}],"display-lg-mobile":["32px",{lineHeight:"44px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-md":["18px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"600"}]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Noto+Sans+Thai:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style id="typography-custom-overrides">:root, body { font-family: 'Montserrat', 'Noto Sans Thai', 'Helvetica Neue', Helvetica, Arial, sans-serif !important; } h1, h2, h3, h4, .font-headline-lg, .font-headline-md, .font-headline-xl, .font-display-lg { font-family: 'Montserrat', 'Noto Sans Thai', sans-serif !important; font-weight: 600; letter-spacing: -0.015em; line-height: 1.35; } body, p, span, .font-body-md, .font-body-sm, .font-label-md, .font-label-lg { font-family: 'Montserrat', 'Noto Sans Thai', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 400; line-height: 1.55; } .font-code-sm { font-family: 'Montserrat', 'Noto Sans Thai', monospace, sans-serif; } .material-symbols-outlined { font-family: 'Material Symbols Outlined' !important; }</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-5"><div class="flex flex-col gap-6"><div class="px-6 flex items-center gap-3"><img alt="ClipTurbo TH Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X29P5f4RA72LA6VyyUllP-pFpe0EQt1H_a3sWCC0I-I5qkrOVDu4cj67N2SjnBIi6cUNe3_42-JiGMVz7MhvTFJ9A6Hi5AaMbD6KXDfhqstUs2IJu5k1pLBQOB5NQEkku6Yp-YPYCbNGhDFjMTJjCgwnJRxlb5hSAvukcbiEIbN0bQUzaL-wF1rGeSAXy4hMXPID6TIw2QjiZPr7Nld-AqCT8k4bagibwfWGhwvtIiMMoT-q-zpAEWzPOF"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">ClipTurbo <span class="text-primary">TH</span></span></div><nav class="px-3 flex flex-col gap-1.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center px-3.5 py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="creator-studio-app" href="#"><span class="material-symbols-outlined mr-3 text-lg">movie_edit</span>Video Studio</a><a class="flex items-center px-3.5 py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="thai-voice-engine" href="#"><span class="material-symbols-outlined mr-3 text-lg">record_voice_over</span>Thai Voice AI</a><a class="flex items-center px-3.5 py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="promptpay-top-up" href="#"><span class="material-symbols-outlined mr-3 text-lg">qr_code_scanner</span>PromptPay Top-up</a><a class="flex items-center px-3.5 py-2.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pricing-plans" href="#"><span class="material-symbols-outlined mr-3 text-lg">loyalty</span>Subscription Plan</a></nav></div><div class="px-4 flex flex-col gap-3"><div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-2"><div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant"><span class="">เครดิตสร้างคลิป</span><span class="text-primary font-bold">฿240 THB</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden"><div class="bg-primary h-full rounded-full" style="width:68%"></div></div><a class="w-full mt-1 py-1.5 px-3 rounded-lg bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container transition-colors text-center font-label-sm text-label-sm font-semibold" data-path="promptpay-top-up" href="#">+ เติมเงิน PromptPay</a></div><a class="flex items-center px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" data-path="product-features" href="#"><span class="material-symbols-outlined mr-2 text-base">help_outline</span>คู่มือ &amp; TikTok Affiliate</a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-3"><span class="font-label-lg text-label-lg text-on-surface">Thai Creator Engine</span><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">v2.4 Active</span></div><div class="flex items-center gap-4"><div class="hidden md:flex items-center px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-secondary mr-1.5 text-base">storefront</span>TikTok Shop TH: เชื่อมต่อแล้ว</div><button class="p-2 text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWe5BJhc3BCC9-myoukXe_32UGLqcfWJJX4HpCY1CJTcEvdq89ukJALqKZCKTK_B1ggN2Cnw-O5F8tJiVZPW3sZEq0VqiI0xJ3pYhV1S9nCbU2jhaisYoWQJ-ehFS5rdVFtFVc5aPVkPH11v3yggP9yc9VR5Ic_cD1SV0Tduwj_pbwqU8X5aWp2P7F3hn2NyMrq-RqewIDQTMeeAb0DFp-HQw7GkeN1uzzt4amUtex5BNxRypTNjzgCg"/></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-8"><div class="flex flex-col w-full pb-16">
+<!-- Top Page Header -->
+<div class="flex flex-col gap-6 mb-8">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span>หน้าหลัก</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span>วิเคราะห์ข้อมูล</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-semibold">แดชบอร์ดภาพรวม</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+          แดชบอร์ดภาพรวม &amp; สถิติการผลิตคลิป
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          วิเคราะห์แนวโน้มการสร้างคลิป ประสิทธิภาพการเรนเดอร์ และอัตราความสำเร็จของงาน TikTok Shop แบบเรียลไทม์
+        </p>
+</div>
+<!-- Quick Date Filter & Actions -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="bg-surface-container-low p-1 rounded-xl flex items-center shadow-sm">
+<button class="date-filter-btn px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold shadow-sm transition-all" type="button">
+            7 วันล่าสุด
+          </button>
+<button class="date-filter-btn px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-all" type="button">
+            30 วันที่ผ่านมา
+          </button>
+<button class="date-filter-btn px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-all" type="button">
+            เดือนนี้
+          </button>
+<button class="date-filter-btn px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-all" type="button">
+            ไตรมาสนี้
+          </button>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded-xl shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-base text-primary">download</span>
+<span>ส่งออก CSV</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Key Metric Stat Cards (Grid of 4) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 mb-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm font-medium text-on-surface-variant">Total Rendered Videos</span>
+<div class="w-9 h-9 rounded-xl bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-xl">smart_display</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="font-headline-xl text-headline-xl font-bold text-on-surface">148</span>
+<span class="font-label-md text-label-md text-on-surface-variant">คลิป</span>
+</div>
+<div class="flex items-center gap-1.5 text-xs font-medium">
+<span class="inline-flex items-center text-primary bg-surface-container-high px-2 py-0.5 rounded-full font-semibold">
+<span class="material-symbols-outlined text-xs mr-0.5">trending_up</span>
+          +24.5%
+        </span>
+<span class="text-on-surface-variant">เทียบกับสัปดาห์ก่อน</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm font-medium text-on-surface-variant">Avg Generation Time</span>
+<div class="w-9 h-9 rounded-xl bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-xl">bolt</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="font-headline-xl text-headline-xl font-bold text-on-surface">28.4</span>
+<span class="font-label-md text-label-md text-on-surface-variant">วินาที / คลิป</span>
+</div>
+<div class="flex items-center gap-1.5 text-xs font-medium">
+<span class="inline-flex items-center text-primary bg-surface-container-high px-2 py-0.5 rounded-full font-semibold">
+<span class="material-symbols-outlined text-xs mr-0.5">speed</span>
+          เร็วขึ้น 40%
+        </span>
+<span class="text-on-surface-variant">กว่าเกณฑ์มาตรฐาน</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm font-medium text-on-surface-variant">Safe Zone Pass Rate</span>
+<div class="w-9 h-9 rounded-xl bg-surface-container-low flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-xl">verified</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="font-headline-xl text-headline-xl font-bold text-on-surface">98.4%</span>
+<span class="font-label-md text-label-md text-on-surface-variant">ผ่านเกณฑ์</span>
+</div>
+<div class="flex items-center gap-1.5 text-xs font-medium">
+<span class="inline-flex items-center text-secondary bg-secondary-fixed px-2 py-0.5 rounded-full font-semibold">
+<span class="material-symbols-outlined text-xs mr-0.5">check_circle</span>
+          พร้อมยิงแอด
+        </span>
+<span class="text-on-surface-variant truncate">ตรงตามข้อกำหนด TikTok Shop</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm font-medium text-on-surface-variant">Remaining Credits</span>
+<div class="w-9 h-9 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary transition-colors">
+<span class="material-symbols-outlined text-xl">generating_tokens</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between gap-2 mb-2">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl font-bold text-on-surface">24</span>
+<span class="font-label-md text-label-md text-on-surface-variant">คลิป</span>
+</div>
+<button class="px-2.5 py-1 rounded-lg bg-secondary text-on-secondary hover:bg-secondary-container hover:text-on-secondary-container text-xs font-semibold shadow-sm transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-xs">add</span>
+          เติมเครดิตด่วน
+        </button>
+</div>
+<div class="w-full bg-surface-container-low rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 38%"></div>
+</div>
+</div>
+</div>
+<!-- Prominent Activity Trends Section (Large central card) -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 sm:p-8 shadow-sm mb-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">
+            แนวโน้มกิจกรรมการสร้างคลิป &amp; ยอดวิวเฉลี่ย (Activity Trends)
+          </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          การเปรียบเทียบสัดส่วนรอบการเรนเดอร์และโมเมนตัมยอดเข้าชมแบบออร์แกนิก 7 วันย้อนหลัง
+        </p>
+</div>
+<!-- Chart Legend & Indicator -->
+<div class="flex items-center gap-5">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-3.5 h-3.5 rounded bg-primary"></span>
+<span>จำนวนคลิปที่เรนเดอร์ (คลิป)</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-3.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span>ยอด View TikTok โดยเฉลี่ย (K)</span>
+</div>
+</div>
+</div>
+<!-- Responsive SVG Line Graph Container -->
+<div class="relative w-full overflow-x-auto">
+<div class="min-w-[680px] h-72 w-full relative">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 800 260">
+<defs>
+<lineargradient id="primaryAreaGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#2563eb" stop-opacity="0.28"></stop>
+<stop offset="100%" stop-color="#2563eb" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="secondaryAreaGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#fd761a" stop-opacity="0.18"></stop>
+<stop offset="100%" stop-color="#fd761a" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Soft Gridlines -->
+<line stroke="#dce9ff" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="780" y1="30" y2="30"></line>
+<line stroke="#dce9ff" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="780" y1="85" y2="85"></line>
+<line stroke="#dce9ff" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="780" y1="140" y2="140"></line>
+<line stroke="#dce9ff" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="780" y1="195" y2="195"></line>
+<line stroke="#d3e4fe" stroke-width="1" x1="40" x2="780" y1="240" y2="240"></line>
+<!-- Y-Axis Labels -->
+<text fill="#737686" font-family="Montserrat" font-size="11" text-anchor="end" x="30" y="34">40</text>
+<text fill="#737686" font-family="Montserrat" font-size="11" text-anchor="end" x="30" y="89">30</text>
+<text fill="#737686" font-family="Montserrat" font-size="11" text-anchor="end" x="30" y="144">20</text>
+<text fill="#737686" font-family="Montserrat" font-size="11" text-anchor="end" x="30" y="199">10</text>
+<text fill="#737686" font-family="Montserrat" font-size="11" text-anchor="end" x="30" y="244">0</text>
+<!-- TikTok Average Views Area & Line (Dashed Orange Line) -->
+<polygon fill="url(#secondaryAreaGrad)" points="70,240 70,165 170,140 270,120 370,135 470,75 570,95 670,60 750,85 750,240"></polygon>
+<path d="M70,165 C120,150 140,145 170,140 C220,130 240,122 270,120 C320,118 340,138 370,135 C420,130 440,80 470,75 C520,70 540,100 570,95 C620,90 640,62 670,60 C710,58 730,80 750,85" fill="none" stroke="#fd761a" stroke-dasharray="6 4" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Rendered Videos Main Area & Line (Cobalt Electric Blue) -->
+<polygon fill="url(#primaryAreaGrad)" points="70,240 70,180 170,150 270,110 370,130 470,55 570,70 670,40 750,65 750,240"></polygon>
+<path d="M70,180 C120,168 140,155 170,150 C220,140 240,115 270,110 C320,105 340,135 370,130 C420,122 440,62 470,55 C520,48 540,75 570,70 C620,65 640,42 670,40 C710,38 730,60 750,65" fill="none" stroke="#2563eb" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"></path>
+<!-- Data Points -->
+<circle cx="70" cy="180" fill="#ffffff" r="4.5" stroke="#2563eb" stroke-width="2.5"></circle>
+<circle cx="170" cy="150" fill="#ffffff" r="4.5" stroke="#2563eb" stroke-width="2.5"></circle>
+<circle cx="270" cy="110" fill="#ffffff" r="4.5" stroke="#2563eb" stroke-width="2.5"></circle>
+<circle cx="370" cy="130" fill="#ffffff" r="4.5" stroke="#2563eb" stroke-width="2.5"></circle>
+<!-- Highlight Point (Thursday - Peak) with Halo -->
+<circle cx="470" cy="55" fill="#2563eb" fill-opacity="0.2" r="9"></circle>
+<circle cx="470" cy="55" fill="#ffffff" r="6" stroke="#2563eb" stroke-width="3"></circle>
+<circle cx="570" cy="70" fill="#ffffff" r="4.5" stroke="#2563eb" stroke-width="2.5"></circle>
+<circle cx="670" cy="40" fill="#ffffff" r="4.5" stroke="#2563eb" stroke-width="2.5"></circle>
+<circle cx="750" cy="65" fill="#ffffff" r="4.5" stroke="#2563eb" stroke-width="2.5"></circle>
+<!-- X-Axis Labels -->
+<text fill="#737686" font-family="'Noto Sans Thai', sans-serif" font-size="11" text-anchor="middle" x="70" y="258">จ. 24 ก.พ.</text>
+<text fill="#737686" font-family="'Noto Sans Thai', sans-serif" font-size="11" text-anchor="middle" x="170" y="258">อ. 25 ก.พ.</text>
+<text fill="#737686" font-family="'Noto Sans Thai', sans-serif" font-size="11" text-anchor="middle" x="270" y="258">พ. 26 ก.พ.</text>
+<text fill="#004ac6" font-family="'Noto Sans Thai', sans-serif" font-size="11" font-weight="600" text-anchor="middle" x="470" y="258">พฤ. 27 ก.พ.</text>
+<text fill="#737686" font-family="'Noto Sans Thai', sans-serif" font-size="11" text-anchor="middle" x="570" y="258">ศ. 28 ก.พ.</text>
+<text fill="#737686" font-family="'Noto Sans Thai', sans-serif" font-size="11" text-anchor="middle" x="670" y="258">ส. 1 มี.ค.</text>
+<text fill="#737686" font-family="'Noto Sans Thai', sans-serif" font-size="11" text-anchor="middle" x="750" y="258">อา. 2 มี.ค.</text>
+</svg>
+<!-- Interactive Floating Tooltip (Thursday Peak) -->
+<div class="absolute left-[54%] top-2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-3.5 py-2 rounded-xl shadow-lg pointer-events-none flex flex-col gap-0.5 z-10 transition-transform">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>วันพฤหัสบดี 27 ก.พ.</span>
+</div>
+<div class="text-xs text-surface-container-high flex items-center gap-2">
+<span>เรนเดอร์สำเร็จ: <strong class="text-white font-bold">32 คลิป</strong></span>
+<span>•</span>
+<span class="text-secondary-fixed">Conversion 4.8%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Task Completion & Health Metrics (2 columns grid with 2 Donut Charts) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+<!-- Donut Chart Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+            อัตราความสำเร็จของกระบวนการเรนเดอร์
+          </h3>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">check_circle</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+          Task Completion Rate &amp; การตรวจสอบความสมบูรณ์ไฟล์เสียงและภาพ
+        </p>
+<div class="flex flex-col sm:flex-row items-center gap-6 justify-center my-3">
+<!-- SVG Donut Chart -->
+<div class="relative w-44 h-44 flex items-center justify-center flex-shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<!-- Background circle track -->
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#eff4ff" stroke-width="3.8"></path>
+<!-- Amber segment (0.5%) -->
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#fd761a" stroke-dasharray="100 100" stroke-dashoffset="0" stroke-linecap="round" stroke-width="3.8"></path>
+<!-- Electric blue segment (1.3%) -->
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#0070bd" stroke-dasharray="99.5 100" stroke-dashoffset="0" stroke-linecap="round" stroke-width="3.8"></path>
+<!-- Primary Emerald/Blue segment (98.2%) -->
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#2563eb" stroke-dasharray="98.2 100" stroke-dashoffset="0" stroke-linecap="round" stroke-width="3.8"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface leading-tight">98.2%</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">สำเร็จสมบูรณ์</span>
+</div>
+</div>
+<!-- Breakdown Legend -->
+<div class="flex flex-col gap-3 w-full sm:max-w-xs">
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md text-on-surface">เรนเดอร์สำเร็จ</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">98.2%</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="w-3 h-3 rounded-full bg-tertiary-container"></span>
+<span class="font-label-md text-label-md text-on-surface">กำลังประมวลผล</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">1.3%</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="font-label-md text-label-md text-on-surface truncate">ต้องแก้ไขลิงก์สินค้า</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">0.5%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Donut Chart Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+            การกระจายประเภทคอนเทนต์
+          </h3>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">pie_chart</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+          Content Format Breakdown แยกตามสไตล์คลิปยอดนิยมบน TikTok Shop TH
+        </p>
+<div class="flex flex-col sm:flex-row items-center gap-6 justify-center my-3">
+<!-- SVG Donut Chart -->
+<div class="relative w-44 h-44 flex items-center justify-center flex-shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<!-- Background circle track -->
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#eff4ff" stroke-width="3.8"></path>
+<!-- Storytelling 12% segment (Total 100%) -->
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#9d4300" stroke-dasharray="100 100" stroke-dashoffset="0" stroke-linecap="round" stroke-width="3.8"></path>
+<!-- Unbox/In-depth 24% segment (Total 88%) -->
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#fd761a" stroke-dasharray="88 100" stroke-dashoffset="0" stroke-linecap="round" stroke-width="3.8"></path>
+<!-- Hard-sell / Fast review 64% segment -->
+<path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#2563eb" stroke-dasharray="64 100" stroke-dashoffset="0" stroke-linecap="round" stroke-width="3.8"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface leading-tight">64%</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">ป้ายยาตื่นเต้น</span>
+</div>
+</div>
+<!-- Breakdown Legend -->
+<div class="flex flex-col gap-3 w-full sm:max-w-xs">
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md text-on-surface truncate">คลิปป้ายยาตะกร้า</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">64%</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="font-label-md text-label-md text-on-surface truncate">รีวิวเจาะลึกแกะกล่อง</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">24%</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface truncate">เล่าเรื่อง Storytelling</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">12%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Activity Log / Recent Batch Tasks Table -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm mb-12">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">
+          ประวัติการเรนเดอร์คลิปล่าสุด (Recent Video Batch Tasks)
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          รายการประมวลผลวิดีโอ 5 รายการล่าสุด พร้อมการตรวจสอบอัตราส่วนภาพ Safe Zone และเสียงพากย์ AI
+        </p>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-semibold hover:underline" href="#">
+<span>ดูทั้งหมดในคลังคลิป</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<th class="py-3 px-4 rounded-l-xl">สินค้า &amp; หัวข้อคลิป</th>
+<th class="py-3 px-4">ผู้พากย์ AI (Voice)</th>
+<th class="py-3 px-4">TikTok Safe Zone</th>
+<th class="py-3 px-4">เวลาเรนเดอร์</th>
+<th class="py-3 px-4 text-center rounded-r-xl">สถานะ</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-medium flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-lg">videocam</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-semibold text-on-surface truncate max-w-xs">
+                  เซรั่มโสมเกาหลี หน้าฉ่ำเงา 30ml
+                </div>
+<div class="text-xs text-on-surface-variant">ID: #CT-8921 • ตะกร้า TikTok Shop</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-xs text-primary">record_voice_over</span>
+                น้องฟ้า (ตื่นเต้น / ป้ายยา)
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">verified</span>
+                ผ่านฉลุย (9:16)
+              </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-code-sm text-code-sm">
+              26.2 วินาที
+            </td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                เสร็จสิ้น
+              </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-medium flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-lg">videocam</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-semibold text-on-surface truncate max-w-xs">
+                  หูฟังไร้สาย บลูทูธ 5.3 เบสแน่น
+                </div>
+<div class="text-xs text-on-surface-variant">ID: #CT-8920 • ตะกร้า TikTok Shop</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-xs text-primary">record_voice_over</span>
+                พี่นนท์ (ทางการ / เทคโนโลยี)
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">verified</span>
+                ผ่านฉลุย (9:16)
+              </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-code-sm text-code-sm">
+              29.8 วินาที
+            </td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                เสร็จสิ้น
+              </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-medium flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-lg">videocam</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-semibold text-on-surface truncate max-w-xs">
+                  แก้วเก็บความเย็น สแตนเลส 900ml
+                </div>
+<div class="text-xs text-on-surface-variant">ID: #CT-8919 • ตะกร้า Shopee Live</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-xs text-secondary">record_voice_over</span>
+                น้องมีนา (สดใส / น่ารัก)
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">verified</span>
+                ผ่านฉลุย (9:16)
+              </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-code-sm text-code-sm">
+              24.1 วินาที
+            </td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                เสร็จสิ้น
+              </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-medium flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-lg">videocam</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg font-semibold text-on-surface truncate max-w-xs">
+                  แปรงสีฟันไฟฟ้า Sonic Pulse
+                </div>
+<div class="text-xs text-on-surface-variant">ID: #CT-8918 • ตะกร้า TikTok Shop</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-xs text-primary">record_voice_over</span>
+                น้องฟ้า (ตื่นเต้น / ป้ายยา)
+              </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">verified</span>
+                ผ่านฉลุย (9:16)
+              </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-code-sm text-code-sm">
+              31.5 วินาที
+            </td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+                เสร็จสิ้น
+              </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Prominent Bottom Action Bar / CTA -->
+<div class="mt-4 p-6 sm:p-8 rounded-3xl bg-surface-container-lowest shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">auto_graph</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface font-semibold">
+          ส่งออกและแชร์รายงานสรุปภาพรวมให้ทีมหรือลูกค้าได้ทันที
+        </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Daily &amp; Weekly Executive Summary พร้อมอินไซต์อัตราการแปลงผล (Conversion Insights) แบบครบวงจร
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto justify-end">
+<button class="px-4 py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold transition-all flex items-center gap-2" id="copySummaryBtn" type="button">
+<span class="material-symbols-outlined text-base">link</span>
+<span>คัดลอกลิงก์รายงาน</span>
+</button>
+<button class="px-5 py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-md transition-all flex items-center gap-2" id="shareSummaryBtn" type="button">
+<span class="material-symbols-outlined text-base">share</span>
+<span>แชร์สรุปภาพรวม</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for date filter buttons
+  document.querySelectorAll('.date-filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.date-filter-btn').forEach(b => {
+        b.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        b.classList.add('text-on-surface-variant');
+      });
+      this.classList.remove('text-on-surface-variant');
+      this.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+    });
+  });
+
+  // Micro-feedback for copy link
+  const copyBtn = document.getElementById('copySummaryBtn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function() {
+      const originalText = this.innerHTML;
+      this.innerHTML = '<span class="material-symbols-outlined text-base text-primary">check</span><span>คัดลอกเรียบร้อย!</span>';
+      setTimeout(() => {
+        this.innerHTML = originalText;
+      }, 2000);
+    });
+  }
+</script></main></div>
+</body></html>
